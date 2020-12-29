@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
+Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);

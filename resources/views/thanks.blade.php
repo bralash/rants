@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anonymous Messages | Rants and Confessions</title>
+    <title>Thank You | Rants and Confessions</title>
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 </head>
 <body>
     
-    <section>
+    <section class="thanks">
         <h1>Rants and Confessions</h1>
-        <h3>Anonymous message</h3>
 
         <div class="message-area">
-            <form action="{{URL::to('/message')}}" method="post">
-                {{csrf_field()}}
-                <textarea name="message" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="Send message">
-            </form>
+            <p>Thank you for your message!!</p>
+            <a href="{{ URL::to('/') }}">Go back</a>
         </div>
     </section>
 

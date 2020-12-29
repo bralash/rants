@@ -9,6 +9,17 @@ section {
     box-sizing: border-box;
 }
 
+section.thanks {
+    width: 500px;
+    margin: 50px auto;
+    font-family: Poppins;
+    color: #fff;
+}
+
+section.thanks a {
+    color: aqua;
+}
+
 section h1 {
     font-family: Poppins;
     color: #ef3b2d;
@@ -22,6 +33,9 @@ section h3 {
     font-size: 16px;
 }
 
+section .message-area p {
+    color: #fff;
+}
 
 section .message-area textarea {
     position: relative;
