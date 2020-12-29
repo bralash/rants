@@ -11,6 +11,7 @@
     
     <section>
         <h1>Rants and Confessions</h1>
+        <h3>Anonymous message</h3>
 
         <div class="message-area">
             <form action="">

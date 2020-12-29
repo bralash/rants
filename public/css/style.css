@@ -12,6 +12,14 @@ section {
 section h1 {
     font-family: Poppins;
     color: #ef3b2d;
+    margin-bottom: 0px;
+}
+
+section h3 {
+    margin-top: 8px;
+    font-family: Poppins;
+    color: #fff;
+    font-size: 16px;
 }
 
 
