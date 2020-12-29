@@ -8,5 +8,9 @@
 </head>
 <body>
     
+    <section>
+        <h1>Rants and Confessions</h1>
+    </section>
+
 </body>
 </html>
