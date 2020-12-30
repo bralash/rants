@@ -39,7 +39,7 @@ section h1 {
 section h3 {
     margin-top: 0px;
     font-family: Poppins;
-    color: rgb(83, 102, 138);
+    color: rgb(129, 130, 132);
     font-size: 14px;
     text-align: center;
 }
@@ -83,6 +83,7 @@ section .message-area textarea {
     font-family: Poppins;
     box-sizing: border-box;
     border: none;
+    margin-bottom: 10px;
 }
 
 section .message-area input,
