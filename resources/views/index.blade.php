@@ -8,24 +8,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="icon" href="{{URL::asset('img/favicon.jpg')}}" type="image/gif" sizes="16x16"> 
 
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="anonymous messaging">
+    
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Anonymous Confessions">
     <meta property="og:description" content="Allows listeners to send in anonymous messages for our podcast">
     <meta property="og:url" content="http://rants.lashpixel.com/">
     <meta property="og:site_name" content="Rants and Confessions">
-    <meta property="article:tag" content="anonymous-confessions">
     <meta property="og:image" content="http://rants.lashpixel.com/img/favicon.jpg">
     <meta property="og:image:secure_url" content="http://rants.lashpixel.com/img/favicon.jpg">
     <meta property="og:image:width" content="1000">
     <meta property="og:image:height" content="1000">
     <meta property="og:image:alt" content="anonymous confessions">
-    <meta name="twitter:card" content="summary">
+    <!-- <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="Allows listeners to send in anonymous messages for our podcast">
     <meta name="twitter:title" content="Anonymous Confessions">
     <meta name="twitter:site" content="@rantsnconfess">
     <meta name="twitter:image" content="http://rants.lashpixel.com/img/favicon.jpg">
-    <meta name="twitter:creator" content="@rantsnconfess">
+    <meta name="twitter:creator" content="@rantsnconfess"> -->
 </head>
 <body>
     
