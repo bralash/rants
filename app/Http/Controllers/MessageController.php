@@ -9,7 +9,7 @@ use App\Models\Message;
 class MessageController extends Controller
 {
     public function index() {
-        return View('thanks');
+        return View('index');
     }
 
     public function message(Request $request) {
@@ -30,5 +30,14 @@ class MessageController extends Controller
         $rant->save();
 
         return View('thanks');
+    }
+
+    public function getMessages() {
+        $messages = Message::orderBy('created_at', 'desc')->get();
+
+        // dd($categories[0]);
+        // dd($categories[0]->subcategories);
+
+        return View('messages',compact('messages'));
     }
 }

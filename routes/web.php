@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
 Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);
+Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
