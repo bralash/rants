@@ -16,7 +16,7 @@
         <div class="message-area">
             <form action="{{URL::to('/message')}}" method="post">
                 {{csrf_field()}}
-                <textarea name="message" id="" cols="30" rows="10"></textarea>
+                <textarea name="message" id="" cols="30" rows="15"></textarea>
                 <input type="submit" value="Send message">
             </form>
         </div>
