@@ -122,11 +122,21 @@ section.thanks .message-area a {
 }
 
 .rants .message {
+    position: relative;
     border: 1px solid #fff;
     padding: 10px;
+    padding-bottom: 15px;
     background: #fff;
     border-radius: 5px;
     font-family: Poppins;
     margin-bottom: 20px;
     font-size: 13px;
+}
+
+.rants .message label {
+    position: absolute;
+    font-size: 10px;
+    bottom: 0px;
+    right: 6px;
+    color: #808080;
 }

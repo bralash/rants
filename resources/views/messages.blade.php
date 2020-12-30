@@ -15,7 +15,10 @@
 
         <div class="rants">
             @foreach($messages as $message)
-                <div class="message">{{$message->message}}</div>
+                <div class="message">
+                    {{$message->message}}
+                    <label for="">{{\Carbon\Carbon::parse($message->created_at)->isoFormat('Do MMM, h:mm a')}}</label>
+                </div>
             @endforeach
         </div>
     </section>
