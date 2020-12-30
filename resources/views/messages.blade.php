@@ -9,14 +9,16 @@
 </head>
 <body>
     
-    <section class="thanks">
+    <section>
         <h1>Rants and Confessions</h1>
+        <h3>Anonymous message</h3>
 
         <div class="message-area">
-            <img src="{{URL::asset('img/plane.jpg')}}" alt="">
-            <h2>Thank you!!</h2>
-            <p>Your message has been sent anonymously</p>
-            <a href="{{URL::to('/')}}">Go Back</a>
+            <form action="{{URL::to('/message')}}" method="post">
+                {{csrf_field()}}
+                <textarea name="message" id="" cols="30" rows="10"></textarea>
+                <input type="submit" value="Send message">
+            </form>
         </div>
     </section>
 

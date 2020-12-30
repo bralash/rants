@@ -9,7 +9,7 @@ use App\Models\Message;
 class MessageController extends Controller
 {
     public function index() {
-        return View('index');
+        return View('thanks');
     }
 
     public function message(Request $request) {
