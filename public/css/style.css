@@ -7,6 +7,7 @@ section {
     margin: 20px auto;
     padding: 20px;
     box-sizing: border-box;
+    max-width: 960px;
 }
 
 section.thanks {
@@ -22,15 +23,21 @@ section.thanks a {
 
 section h1 {
     font-family: Poppins;
-    color: #ef3b2d;
+    color: #fff;
     margin-bottom: 0px;
 }
 
 section h3 {
-    margin-top: 8px;
+    margin-top: 0px;
     font-family: Poppins;
-    color: #fff;
-    font-size: 16px;
+    color: rgb(83, 102, 138);
+    font-size: 14px;
+    text-align: center;
+}
+
+section .message-area {
+    background: #fff;
+    border-radius: 10px 10px 0 0;
 }
 
 section .message-area p {
@@ -39,7 +46,7 @@ section .message-area p {
 
 section .message-area textarea {
     position: relative;
-    background: #2d3748;
+    background: transparent;
     width: 100%;
     border-radius: 15px;
     border: #323b4a;
@@ -50,9 +57,8 @@ section .message-area textarea {
     -moz-box-shadow: none;
     box-shadow: none;
     padding: 20px;
-    color: #fff;
+    color: #2d3748;
     font-family: Poppins;
-    margin-bottom: 20px;
     box-sizing: border-box;
 }
 
@@ -71,13 +77,13 @@ section .message-area input {
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-left-color: transparent;
-    padding: .375rem .75rem;
+    padding: .8rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     cursor: pointer;
     color: #fff;
-    background-color: #138496;
-    border-color: #117a8b;
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    background-color: #4abdfe;
 }
