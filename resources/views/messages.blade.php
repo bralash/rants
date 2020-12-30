@@ -6,6 +6,7 @@
     <title>Confessions | Rants and Confessions</title>
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="icon" href="{{URL::asset('img/favicon.jpg')}}" type="image/gif" sizes="16x16"> 
 </head>
 <body>
     
