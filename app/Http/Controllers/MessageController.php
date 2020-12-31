@@ -35,18 +35,21 @@ class MessageController extends Controller
     }
 
     public function getMessages() {
-        $updateDetails = [
-            'archive' => '1'
-        ];
 
-        DB::table('messages')->where('created_at', '<=', Carbon::now()->subweek())->update($updateDetails);
+        if(Carbon::now()->dayOfWeek == 0) {
+            // Archive all confessions on Sundays
+            $updateDetails = [
+                'archive' => '1'
+            ];
+            
+    
+            DB::table('messages')->update($updateDetails);
+        }
+
+        
 
         $messages = DB::table('messages')->where('archive', '0')->orderBy('created_at', 'desc')->get();
 
         return View('messages',compact('messages'));
-
-        
-
-        // print_r($rows);
     }
 }
