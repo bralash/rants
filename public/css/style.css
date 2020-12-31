@@ -136,7 +136,7 @@ section.thanks .message-area a {
     position: relative;
     border: 1px solid #fff;
     padding: 10px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     background: #fff;
     border-radius: 5px;
     font-family: Poppins;
@@ -149,5 +149,9 @@ section.thanks .message-area a {
     font-size: 10px;
     bottom: 0px;
     right: 6px;
-    color: #808080;
+    color: #b3b3b3;
+}
+
+.rants .message label.brand {
+    left: 10px;
 }

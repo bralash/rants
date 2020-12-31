@@ -30,6 +30,7 @@
                 <div class="message">
                     {{$message->message}}
                     <label for="">{{\Carbon\Carbon::parse($message->created_at)->isoFormat('Do MMM, h:mm a')}}</label>
+                    <label class="brand">Rants and Confessions</label>
                 </div>
             @endforeach
         </div>
