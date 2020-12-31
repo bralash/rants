@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="icon" href="{{URL::asset('img/favicon.jpg')}}" type="image/gif" sizes="16x16"> 
+    <script src="https://use.fontawesome.com/4b9b01d581.js"></script>
+
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Anonymous Confessions">
@@ -30,7 +32,11 @@
                 <div class="message">
                     {{$message->message}}
                     <label for="">{{\Carbon\Carbon::parse($message->created_at)->isoFormat('Do MMM, h:mm a')}}</label>
-                    <label class="brand">Rants and Confessions</label>
+                    <label class="brand">
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        rantsnconfess
+                    </label>
                 </div>
             @endforeach
         </div>

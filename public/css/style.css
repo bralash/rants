@@ -155,3 +155,11 @@ section.thanks .message-area a {
 .rants .message label.brand {
     left: 10px;
 }
+
+.rants .message label.brand i:first-child {
+    color: #fbad50;
+}
+
+.rants .message label.brand i:last-child {
+    color: #00acee;
+}
