@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Message;
+use DB;
+use Carbon\Carbon;
 
 class MessageController extends Controller
 {
@@ -33,11 +35,18 @@ class MessageController extends Controller
     }
 
     public function getMessages() {
-        $messages = Message::orderBy('created_at', 'desc')->get();
+        $updateDetails = [
+            'archive' => '1'
+        ];
 
-        // dd($categories[0]);
-        // dd($categories[0]->subcategories);
+        DB::table('messages')->where('created_at', '<=', Carbon::now()->subweek())->update($updateDetails);
+
+        $messages = DB::table('messages')->where('archive', '0')->orderBy('created_at', 'desc')->get();
 
         return View('messages',compact('messages'));
+
+        
+
+        // print_r($rows);
     }
 }
