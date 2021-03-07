@@ -36,15 +36,15 @@ class MessageController extends Controller
 
     public function getMessages() {
 
-        if(Carbon::now()->dayOfWeek == 0) {
-            // Archive all confessions on Sundays
-            $updateDetails = [
-                'archive' => '1'
-            ];
+        // if(Carbon::now()->dayOfWeek == 0) {
+        //     // Archive all confessions on Sundays
+        //     $updateDetails = [
+        //         'archive' => '1'
+        //     ];
             
     
-            DB::table('messages')->update($updateDetails);
-        }
+        //     DB::table('messages')->update($updateDetails);
+        // }
 
         
 
