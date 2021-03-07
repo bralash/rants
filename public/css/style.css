@@ -1,0 +1,165 @@
+body {
+    background: #1a202c;
+}
+
+img {
+    display: block;
+    max-width: 80%;
+    border-radius: 10px 10px 0 0;
+    margin: 0px auto;
+}
+
+section {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 960px;
+}
+
+
+section.thanks a {
+    color: aqua;
+}
+
+section.thanks .message-area p {
+    color: #49647f;
+    text-align: center;
+    margin-top: 2px;
+    text-align: center;
+}
+
+section h1 {
+    font-family: Poppins;
+    color: #fff;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+section h3 {
+    margin-top: 0px;
+    font-family: Poppins;
+    color: rgb(129, 130, 132);
+    font-size: 14px;
+    text-align: center;
+}
+
+section .message-area {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    width: 100%;
+    border: #323b4a;
+    padding-bottom: 1px;
+}
+section.thanks .message-area {
+    margin-top: 20px;
+    border-radius: 10px;
+    font-family: Poppins;
+    padding-bottom: 1px;
+}
+
+section.thanks h2 {
+    color: #314961;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+section .message-area p {
+    color: #fff;
+}
+
+section .message-area textarea {
+    background: transparent;
+    width: 100%;
+    resize: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 20px;
+    color: #2d3748;
+    font-family: Poppins;
+    box-sizing: border-box;
+    border: none;
+    margin-bottom: 10px;
+}
+
+section .message-area input,
+section.thanks .message-area a {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    padding: .8rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    cursor: pointer;
+    color: #fff;
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    background-color: #4abdfe;
+}
+
+section .message-area input {
+    width: 200px;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 0px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+section.thanks .message-area a {
+    width: 100px;
+    margin: 10px auto;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    padding: .6rem .75rem;
+}
+
+.rants .message {
+    position: relative;
+    border: 1px solid #fff;
+    padding: 10px;
+    padding-bottom: 20px;
+    background: #fff;
+    border-radius: 5px;
+    font-family: Poppins;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.rants .message label {
+    position: absolute;
+    font-size: 10px;
+    bottom: 0px;
+    right: 6px;
+    color: #b3b3b3;
+}
+
+.rants .message label.brand {
+    left: 10px;
+}
+
+.rants .message label.brand i:first-child {
+    color: #fbad50;
+}
+
+.rants .message label.brand i:last-child {
+    color: #00acee;
+}
