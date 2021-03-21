@@ -42,5 +42,7 @@
         </div>
     </section>
 
+    <script src="{{URL::asset('js/jquery.js')}}"></script>
+    <script src="{{URL::asset('js/script.js')}}"></script>
 </body>
 </html>
