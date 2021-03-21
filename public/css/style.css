@@ -163,3 +163,7 @@ section.thanks .message-area a {
 .rants .message label.brand i:last-child {
     color: #00acee;
 }
+
+.tomato {
+    color: tomato;
+}
