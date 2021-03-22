@@ -12,10 +12,10 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Anonymous Confessions">
     <meta property="og:description" content="Allows listeners to send in anonymous messages for our podcast">
-    <meta property="og:url" content="http://rants.lashpixel.com/">
+    <meta property="og:url" content="http://rantsnconfess.com/">
     <meta property="og:site_name" content="Rants and Confessions">
-    <meta property="og:image" content="http://rants.lashpixel.com/img/favicon.jpg">
-    <meta property="og:image:secure_url" content="http://rants.lashpixel.com/img/favicon.jpg">
+    <meta property="og:image" content="http://rantsnconfess/img/favicon.jpg">
+    <meta property="og:image:secure_url" content="http://rantsnconfess/img/favicon.jpg">
     <meta property="og:image:width" content="1000">
     <meta property="og:image:height" content="1000">
     <meta property="og:image:alt" content="anonymous confessions">
@@ -45,7 +45,7 @@
             <form action="{{URL::to('/upload-audio')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
 
-                <input type="file" name="rant_audio">
+                <input type="file" name="rant_audio" required>
                 <input type="submit" value="Upload Audio">
             </form>
         </div>
