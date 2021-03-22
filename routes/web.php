@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
 Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);
 Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
+
+
+Route::post('/upload-audio', ['uses' => 'App\Http\Controllers\AudioController@store']);
+Route::get('/get-audio', ['uses' => 'App\Http\Controllers\AudioController@getAudio']);

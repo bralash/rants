@@ -51,6 +51,17 @@ section .message-area {
     width: 100%;
     border: #323b4a;
     padding-bottom: 1px;
+    margin-bottom: 10px;
+}
+
+section .message-area.audio {
+    padding-top: 10px;
+}
+
+section .message-area.audio input[type="file"] {
+    width: 60%;
+    background: #ccc;
+    cursor: pointer;
 }
 section.thanks .message-area {
     margin-top: 20px;
