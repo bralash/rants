@@ -8,3 +8,9 @@
     <meta property="og:image:width" content="1000">
     <meta property="og:image:height" content="1000">
     <meta property="og:image:alt" content="anonymous confessions">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rantsnconfess">
+    <meta name="twitter:creator" content="@rantsnconfess">
+    <meta name="twitter:title" content="Anonymous Messaging For Rants and Confessions">
+    <meta name="twitter:description" content="Official anonymous messaging platform for Rants and Confessions Podcast">
+    <meta name="twitter:image" content="https://rantsnconfess.com/img/favicon.jpg">
