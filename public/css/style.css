@@ -178,3 +178,15 @@ section.thanks .message-area a {
 .tomato {
     color: tomato;
 }
+
+.rant-audio {
+    display: block;
+    text-decoration: none;
+    border: 1px solid tomato;
+    width: 60%;
+    background: tomato;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 3px #ccc;
+}

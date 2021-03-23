@@ -34,7 +34,7 @@
                         <source src="{{ asset('audio/').'/'.$audio->audio }}" type="type/mp3">
                         Your browser does not support the audio element.
                     </audio>  -->
-                    <a href="{{ asset('audio/').'/'.$audio->audio }}" download>{{$audio->audio}}</a>
+                    <a href="{{ asset('audio/').'/'.$audio->audio }}" class="rant-audio" download>{{$audio->audio}}</a>
                     <label for="">{{\Carbon\Carbon::parse($audio->created_at)->isoFormat('Do MMM, h:mm a')}}</label>
                     <label class="brand">
                         <i class="fa fa-instagram"></i>
