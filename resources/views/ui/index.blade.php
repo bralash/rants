@@ -13,7 +13,7 @@
                         <div class="podcast-episode">
                             <div class="podcast-episode-player" data-episode-download="{{URL::asset('podcast-files/Episode 2 - Handling an insecure partner.mp3')}}" data-episode-download-button="Download Episode (831.6 KB)" data-episode-duration="15:50" data-episode-size="831.6 KB">
                                 <audio class="wp-audio-shortcode" preload="none" style="width: 100%;" controls="controls">
-                                    <source src="{{URL::asset('podcast-files/Episode 2 - Handling an insecure partner.mp3')}}" type="audio/mp3" />
+                                    <source src="http://docs.google.com/uc?export=open&id=17a3pTyxZflULU7NLSbhkTfLBcQJ8ottm" type="audio/mp3" />
                                     {{-- <source src="http://html.liviucerchez.com/common/preview1.ogg" type="audio/ogg" /> --}}
                                 </audio>
                             </div>
