@@ -20,3 +20,9 @@ Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@g
 
 Route::post('/upload-audio', ['uses' => 'App\Http\Controllers\AudioController@store']);
 Route::get('/get-audio', ['uses' => 'App\Http\Controllers\AudioController@getAudio']);
+
+
+
+// UI Related Routes
+
+Route::get('/test', ['uses' => 'App\Http\Controllers\UIController@index']);
