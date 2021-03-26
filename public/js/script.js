@@ -78,7 +78,7 @@ $(document).ready(function() {
                                     <h2 class="entry-title"><a href="single-episode.html" rel="bookmark">${epTitle}</a></h2>
                                 </header>
                                 <div class="entry-content">
-                                    ${epDesc.toString().substr(0,250)} &hellip; <a href="{{URL::to('episode/')}}">(read more)</a>
+                                    ${epDesc.toString().substr(0,250)} &hellip; <a href="episode/${epSeason}/${epEpisode}">(read more)</a>
                                 </div>
                                 <div class="entry-audio">
                                     <div class="podcast-episode">
