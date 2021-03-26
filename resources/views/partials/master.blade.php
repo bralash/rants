@@ -147,17 +147,18 @@
 		</div>
 	</footer>
 
-	<script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/modernizr-custom.js"></script>
-	<script src="assets/js/functions.js"></script>
+	<script src="{{URL::asset('assets/js/jquery-3.2.1.min.js')}}"></script>
+	<script src="{{URL::asset('assets/js/modernizr-custom.js')}}"></script>
+	<script src="{{URL::asset('assets/js/functions.js')}}"></script>
 
 	<!-- MediaElement.js files -->
-	<link rel="stylesheet" id="mediaelement-css"  href="assets/mediaelement/mediaelementplayer-legacy.css">
-	<link rel="stylesheet" id="wp-mediaelement-css"  href="assets/mediaelement/wp-mediaelement.css">
-	<link rel="stylesheet" id="castilo-additional-mediaelement-css"  href="assets/css/mediaelement-castilo.css">
-	<script src="assets/mediaelement/mediaelement-and-player.js"></script>
-	<script src="assets/mediaelement/mediaelement-migrate.js"></script>
-	<script src="assets/mediaelement/wp-mediaelement.js"></script>
-	<script src="assets/js/mediaelement-castilo.js"></script>
+	<link rel="stylesheet" id="mediaelement-css"  href="{{URL::asset('assets/mediaelement/mediaelementplayer-legacy.css')}}">
+	<link rel="stylesheet" id="wp-mediaelement-css"  href="{{URL::asset('assets/mediaelement/wp-mediaelement.css')}}">
+	<link rel="stylesheet" id="castilo-additional-mediaelement-css"  href="{{URL::asset('assets/css/mediaelement-castilo.css')}}">
+	<script src="{{URL::asset('assets/mediaelement/mediaelement-and-player.js')}}"></script>
+	<script src="{{URL::asset('assets/mediaelement/mediaelement-migrate.js')}}"></script>
+	<script src="{{URL::asset('assets/mediaelement/wp-mediaelement.js')}}"></script>
+	<script src="{{URL::asset('assets/js/mediaelement-castilo.js')}}"></script>
+	<script src="{{URL::asset('js/script.js')}}"></script>
 </body>
 </html>
