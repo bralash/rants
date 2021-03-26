@@ -2565,7 +2565,7 @@ button .zmdi {
 }
 
 .episodes-listing .entry-episode .entry-title:before {
-	content: '\f10f';
+	content: '\f2ab';
 }
 
 .episodes-listing .entry-audio .podcast-episode-player {

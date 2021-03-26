@@ -48,7 +48,12 @@ $(document).ready(function() {
 
                 const epImage = el.find("itunes\\:image").attr('href');
                 const epSeason = el.find("itunes\\:season").text();
-                const epPubDate = el.find("pubDate").text();
+                const epEpisode = el.find("itunes\\:episode").text();
+                const epPubDate = el.find("pubDate").text().toString();
+                const epTitle = el.find("title").text();
+                const epDesc = el.find("itunes\\:summary").text();
+                const epAudio = el.find("enclosure").attr('url');
+                
                 
                 const template = `
                     
@@ -68,19 +73,19 @@ $(document).ready(function() {
                             <div class="col-12 col-md-8 col-xl-9">
                                 <header class="entry-header">
                                     <div class="entry-meta">
-                                        <span class="posted-in"><span class="screen-reader-text">Posted in: </span> <a href="episodes.html" rel="bookmark">Season ${epSeason}</a></span> <span class="posted-on"><span class="screen-reader-text">Posted on: </span> <a href="single-episode.html" rel="bookmark"><time class="entry-date published" datetime="2017-09-13T14:48:37+00:00">${epPubDate}</time></a></span> <span class="tags"><span class="screen-reader-text">Tagged: </span> <a rel="tag" href="#">audio</a>, <a rel="tag" href="#">goodbyes</a>, <a rel="tag" href="#">life</a></span>
+                                        <span class="posted-in"><span class="screen-reader-text">Posted in: </span> <a href="episodes.html" rel="bookmark">Season ${epSeason}</a></span>  <span class="posted-on"><span class="screen-reader-text">Posted in: </span> <a href="episodes.html" rel="bookmark">Episode ${epEpisode}</a></span>  <span class="posted-on"><span class="screen-reader-text">Posted on: </span> <a href="single-episode.html" rel="bookmark"><time class="entry-date published" datetime="2017-09-13T14:48:37+00:00">${epPubDate.substr(0,16)}</time></a></span>
                                     </div>
-                                    <h2 class="entry-title"><a href="single-episode.html" rel="bookmark">A short wave goodbye for my good friend Francisco</a></h2>
+                                    <h2 class="entry-title"><a href="single-episode.html" rel="bookmark">${epTitle}</a></h2>
                                 </header>
                                 <div class="entry-content">
-                                    <p>Capicola jerky ham hock, pork doner jowl tail boudin strip steak rump kevin bresaola salami biltong cupim kevin tri-tip sirloin spare ribs turkey corned beef turkey cow short ribs&hellip; <a href="single-episode.html">(read more)</a></p>
+                                    ${epDesc.toString().substr(0,250)} &hellip; <a href="{{URL::to('episode/')}}">(read more)</a>
                                 </div>
                                 <div class="entry-audio">
                                     <div class="podcast-episode">
                                         <div class="podcast-episode-player" data-episode-duration="00:41">
-                                            <audio class="wp-audio-shortcode" preload="none" style="width: 100%;" controls="controls">
-                                                <source src="http://html.liviucerchez.com/common/preview1.mp3" type="audio/mpeg" />
-                                                <source src="http://html.liviucerchez.com/common/preview1.ogg" type="audio/ogg" />
+                                            <audio class="wp-audio-shortcode" preload="auto" style="width: 100%;" controls="controls">
+                                                <source src="${epAudio}" type="audio/mp3" />
+                                                
                                             </audio>
                                         </div>
                                     </div>
