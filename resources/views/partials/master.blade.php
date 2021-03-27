@@ -21,12 +21,12 @@
 	<style id="castilo-inline-style">
 		.featured-content {
 			background-color: #313131;
-			background-image: url(assets/img/sample-header1-small.jpg);
+			background-image: url(assets/img/sample-header-small.jpg);
 		}
 
 		@media (min-width: 768px) {
 			.featured-content {
-				background-image: url(assets/img/sample-header1.jpg);
+				background-image: url(assets/img/sample-header.jpg);
 			}
 		}
 
