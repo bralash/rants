@@ -77,7 +77,7 @@
 					</ul>
 				</nav>
 				<div class="call-to-action col-12 col-sm-auto order-5 order-sm-2 order-lg-4">
-					<a href="#" class="button button-small" target="_blank"><span class="zmdi zmdi-filter-list"></span> Live now</a>
+					<a href="#" class="button button-small" target="_blank"><span class="zmdi zmdi-edit"></span> Message</a>
 				</div>
 				<div class="site-menu-toggle col-auto order-2 order-sm-3">
 					<a href="#site-menu">
