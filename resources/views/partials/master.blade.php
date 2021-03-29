@@ -18,26 +18,7 @@
 
 	<link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}">
 
-	<style id="castilo-inline-style">
-		.featured-content {
-			background-color: #313131;
-			background-image: url(assets/img/sample-header-small.jpg);
-		}
-
-		@media (min-width: 768px) {
-			.featured-content {
-				background-image: url(assets/img/sample-header.jpg);
-			}
-		}
-
-		.sales-box {
-			background-image: url(assets/img/sample-sales.jpg);
-		}
-
-		.latest-news {
-			background-image: url(assets/img/latest-news.jpg);
-		}
-	</style>
+	
 </head>
 <body class="home">
     
@@ -47,7 +28,7 @@
 			<div class="row align-items-center">
 				<div class="site-title col col-lg-auto order-first">
 					<h1>
-						<a href="index.html" class="custom-logo-link" rel="home">
+						<a href="{{URL::to('/test')}}" class="custom-logo-link" rel="home">
 							<img src="{{URL::asset('img/logo.png')}}" class="custom-logo" width="76" height="18" alt="Castilo">
 						</a>
 					</h1>
@@ -77,7 +58,7 @@
 					</ul>
 				</nav>
 				<div class="call-to-action col-12 col-sm-auto order-5 order-sm-2 order-lg-4">
-					<a href="#" class="button button-small" target="_blank"><span class="zmdi zmdi-edit"></span> Message</a>
+					<a href="{{URL::to('/')}}" class="button button-small" target="_blank"><span class="zmdi zmdi-edit"></span> Message</a>
 				</div>
 				<div class="site-menu-toggle col-auto order-2 order-sm-3">
 					<a href="#site-menu">
@@ -107,9 +88,10 @@
 					<section class="widget widget_text">
 						<h3 class="widget-title">Don't miss our weekly episodes. Subscribe now!</h3>
 						<div class="textwidget">
-							<form class="mc4wp-form" method="post">
+							<form class="mc4wp-form" action="{{URL::to('/mailing-list')}}" method="post">
+								{{ csrf_field() }}
 								<div class="mc4wp-form-fields">
-									<p>A theme with a simple and organized approach to presenting your content with understated charm and undeniable appeal.</p>
+									<p>Be ahead of everyone else. Get notified whenever we post a new episode. Be the first to listen &hearts;</p>
 									<p class="one-line">
 										<label class="screen-reader-text" for="subscribe_email">Subscription Email</label><input id="subscribe_email" name="email" required="" placeholder="Your email address&hellip;" type="email"><input value="Subscribe" type="submit" class="button-color button-filled">
 									</p>
@@ -122,26 +104,23 @@
 						<nav>
 							<ul class="social-navigation">
 								<li class="menu-item menu-item-type-custom">
-									<a title="Facebook Profile" target="_blank" href="http://facebook.com"><span class="screen-reader-text">Facebook</span></a>
+									<a title="Facebook" target="_blank" href="https://facebook.com/rantsnconfess"><span class="screen-reader-text">Facebook</span></a>
 								</li>
 								<li class="menu-item menu-item-type-custom">
-									<a title="Google Play" target="_blank" href="http://play.google.com"><span class="screen-reader-text">Google Play</span></a>
+									<a title="Instagram" target="_blank" href="https://www.instagram.com/rantsnconfess/"><span class="screen-reader-text">Google Play</span></a>
 								</li>
 								<li class="menu-item menu-item-type-custom">
-									<a title="Twitter Profile" target="_blank" href="http://twitter.com"><span class="screen-reader-text">Twitter</span></a>
+									<a title="Twitter" target="_blank" href="https://twitter.com/RantsNConfess"><span class="screen-reader-text">Twitter</span></a>
 								</li>
 								<li class="menu-item menu-item-type-custom">
-									<a title="SoundCloud" target="_blank" href="http://soundcloud.com/podcast"><span class="screen-reader-text">SoundCloud</span></a>
-								</li>
-								<li class="menu-item menu-item-type-custom">
-									<a title="YouTube Channel" target="_blank" href="http://youtube.com"><span class="screen-reader-text">YouTube</span></a>
+									<a title="YouTube" target="_blank" href="https://www.youtube.com/channel/UCvTf0K_R-OMoswl-aDQn4nQ"><span class="screen-reader-text">YouTube</span></a>
 								</li>
 							</ul>
 						</nav>
 					</section>
 				</div>
 				<div class="copyright col-12">
-					<p>&copy; Castilo with &hearts; in Europe. All Rights Reserved.</p>
+					<p>&copy; Built with &hearts; by <a href="https://instagram.com/lashpixel" title="Emmanuel Asaber">Lashpixel</a>. All Rights Reserved.</p>
 				</div>
 			</div>
 		</div>
