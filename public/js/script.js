@@ -69,6 +69,13 @@ $(document).ready(function() {
                 `;
                 episodesContainer.insertAdjacentHTML("beforeend",template)
             });
+
+            $('article.entry-episode').hide();
+            $('article.entry-episode:lt(5)').show();
         }
     });
+
+    
+    
+
 });

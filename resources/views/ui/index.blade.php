@@ -43,6 +43,9 @@
                     <h3 class="add-separator"><span>Browse <em>Episodes</em></span></h3>
                     
                 </div>
+                <div class="pagination pagination-load-more">
+                    <a href="episodes.html" class="button button-filled"><span class="zmdi zmdi-more"></span> Browse More</a>
+                </div>
             </div>
         </div>
     </div>
