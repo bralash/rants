@@ -23,7 +23,14 @@ $(document).ready(function() {
                 $(data).find("item")
                 .each(function() {
                     const el = $(this);
-                    // console.log(el.find("guid").text());
+
+                    let currentDate = el.find("pubDate").text().toString();
+                    let momentDate = moment(currentDate);
+
+                    let parsedDate = momentDate.format('YYYY-MM-DD h:mm:ss');
+                    // console.log(currentDate + ' ' + parsedDate);
+
+
 
                         const url = window.location.origin + '/api/episodes';
 
@@ -33,7 +40,7 @@ $(document).ready(function() {
                             img_url : el.find("itunes\\:image").attr('href'),
                             audio_url : el.find("enclosure").attr('url'),
                             duration : el.find("itunes\\:duration").text(),
-                            posted_on : el.find("pubDate").text().toString(),
+                            posted_on : parsedDate,
                             season : el.find("itunes\\:season").text(),
                             episode : el.find("itunes\\:episode").text(),
                             anchor_podcast : el.find("link").text(),
@@ -44,8 +51,6 @@ $(document).ready(function() {
                         $.post(url,data, function(data, status) {
                             console.log(`${data} and status is ${status}`)
                         });
-
-                    
     
                 });
 

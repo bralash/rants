@@ -21,6 +21,7 @@
 </style>
 @section('featured')
 
+@if (!empty($featured))
 <header id="featured" class="featured-content fade-background-0 padding-top-bottom">
     <div class="container">
         <div class="row align-items-center">
@@ -53,6 +54,7 @@
         </div>
     </div>
 </header>
+@endif
 
 @endsection
 

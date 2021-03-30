@@ -11,7 +11,7 @@ class UIController extends Controller
 {
     public function index() {
 
-        $episodes = Episode::where('archive', '0')->orderBy('id', 'asc')->paginate(5);
+        $episodes = Episode::where('archive', '0')->orderBy('posted_on', 'desc')->paginate(5);
         $featured = Episode::where('featured', '1')->first();
 
         foreach ($episodes as $episode) {

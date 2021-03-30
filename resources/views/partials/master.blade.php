@@ -138,6 +138,7 @@
 	<script src="{{URL::asset('assets/mediaelement/mediaelement-migrate.js')}}"></script>
 	<script src="{{URL::asset('assets/mediaelement/wp-mediaelement.js')}}"></script>
 	<script src="{{URL::asset('assets/js/mediaelement-castilo.js')}}"></script>
+	<script src="{{URL::asset('js/moment.min.js')}}"></script>
 	<script src="{{URL::asset('js/script.js')}}"></script>
 </body>
 </html>
