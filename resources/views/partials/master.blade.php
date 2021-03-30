@@ -47,7 +47,7 @@
 							<a title="Facebook" target="_blank" href="https://facebook.com/rantsnconfess"><span class="screen-reader-text">Facebook</span></a>
 						</li>
 						<li class="menu-item menu-item-type-custom">
-							<a title="Instagram" target="_blank" href="https://www.instagram.com/rantsnconfess/"><span class="screen-reader-text">Google Play</span></a>
+							<a title="Instagram" target="_blank" href="https://www.instagram.com/rantsnconfess/"><span class="screen-reader-text">Instagram</span></a>
 						</li>
 						<li class="menu-item menu-item-type-custom">
 							<a title="Twitter" target="_blank" href="https://twitter.com/RantsNConfess"><span class="screen-reader-text">Twitter</span></a>
@@ -58,7 +58,7 @@
 					</ul>
 				</nav>
 				<div class="call-to-action col-12 col-sm-auto order-5 order-sm-2 order-lg-4">
-					<a href="{{URL::to('/')}}" class="button button-small" target="_blank"><span class="zmdi zmdi-edit"></span> Message</a>
+					<a href="{{URL::to('/')}}" class="button button-small"><span class="zmdi zmdi-edit"></span> Message</a>
 				</div>
 				<div class="site-menu-toggle col-auto order-2 order-sm-3">
 					<a href="#site-menu">
@@ -120,7 +120,7 @@
 					</section>
 				</div>
 				<div class="copyright col-12">
-					<p>&copy; Built with &hearts; by <a href="https://instagram.com/lashpixel" title="Emmanuel Asaber">Lashpixel</a>. All Rights Reserved.</p>
+					<p>&copy; Built with &hearts; by <a href="https://instagram.com/lashpixel" title="Emmanuel Asaber" target="_blank">Lashpixel</a>. All Rights Reserved.</p>
 				</div>
 			</div>
 		</div>

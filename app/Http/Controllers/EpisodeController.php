@@ -9,21 +9,18 @@ use Illuminate\Http\Request;
 class EpisodeController extends Controller
 {
     public function index() {
-        return Episode::all();
+        return Episode::all('guid');
     }
+
 
     public function show(Episode $episode) {
         return $episode;
     }
 
-    public function store(Request $request) {
-        $guid = Episode::where('guid','=', $request->guid)->first();
-        if($guid === null) {
-            $episode = Episode::create($request->all());
-            return response()->json($episode);
-        }
+    public function store(Request $request) { 
+        $episode = Episode::create($request->all());
+        return response()->json($episode);
         
-        return response()->json($request->guid, 200);
     }
 
     public function update(Request $request, Episode $episode)
