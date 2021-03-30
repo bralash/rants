@@ -1,4 +1,5 @@
 @extends('partials.master')
+@section('title','Rants and Confessions')
 <style id="castilo-inline-style">
     .featured-content {
         background-color: #313131;
