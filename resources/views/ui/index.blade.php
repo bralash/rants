@@ -128,8 +128,15 @@
             </div>
             <div class="col-12 col-md-6">
                 <h3>New Stuff Each Week!</h3>
-                <p>Listen below and order your copy from Amazon, iTunes or your favorite record store. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseqa untur magni dolores eos qui ratione sequi.</p>
-                <p><a href="https://anchor.fm/rants-and-confessions" class="button button-small button-white" target="_blank">Anchor</a> <a href="#" class="button button-small button-white">iTunes</a> <a href="#" class="button button-small button-white">Spotify</a></p>
+                <p>
+                    New and exciting episodes every week. Feel free to listen on your favorite platform of choice.
+                    For your voice to be heard, send in your <i>confessions</i> on the related topic each week.
+                </p>
+                <p>
+                    <a href="https://anchor.fm/rants-and-confessions" class="button button-small button-white" target="_blank">Anchor</a>
+                    <a href="https://podcasts.apple.com/gh/podcast/rants-and-confessions/id1536307081" class="button button-small button-white" target="_blank">Apple Podcasts</a>
+                    <a href="https://open.spotify.com/show/5xP3LJgQnNsulrIDfr3LTU" class="button button-small button-white">Spotify</a>
+                </p>
             </div>
         </div>
     </div>

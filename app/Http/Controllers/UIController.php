@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Episode;
 use App\Models\Mailing;
 use DB;
+use Carbon\Carbon;
 
 class UIController extends Controller
 {
@@ -16,6 +17,8 @@ class UIController extends Controller
 
         foreach ($episodes as $episode) {
             $episode->description = strip_tags($episode->description);
+            $date = Carbon::createFromFormat('Y-m-d H:i:s', $episode->posted_on);
+            $episode->posted_on = $date->toFormattedDateString();
         }
 
         return View('ui.index',compact('episodes', 'featured'));
