@@ -11,9 +11,14 @@ class UIController extends Controller
 {
     public function index() {
 
-        $episodes = DB::table('episodes')->where('archive', '0')->orderBy('created_at', 'desc')->get();
+        $episodes = Episode::where('archive', '0')->orderBy('id', 'asc')->paginate(5);
+        $featured = Episode::where('featured', '1')->first();
 
-        return View('ui.index',compact('episodes'));
+        foreach ($episodes as $episode) {
+            $episode->description = strip_tags($episode->description);
+        }
+
+        return View('ui.index',compact('episodes', 'featured'));
     }
 
 

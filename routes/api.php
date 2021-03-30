@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+// Route::get('episodes','EpisodeController@index');
+Route::get('episodes/{episode}','EpisodeController@show');
+// Route::post('episodes','EpisodeController@store');
+Route::put('episodes/{episode}','EpisodeController@update');
+Route::delete('episodes/{episode}','EpisodeController@delete');
+
+Route::get('episodes', ['uses' => 'App\Http\Controllers\EpisodeController@index']);
+Route::post('episodes', ['uses' => 'App\Http\Controllers\EpisodeController@store']);

@@ -5,75 +5,54 @@ $(document).ready(function() {
 
 
 
-    // const RSS_URL = `https://anchor.fm/s/37e1314c/podcast/rss`;
-    // const episodesContainer = document.getElementById('ep-list');
+    const updateEpisode = () => {
+        const RSS_URL = `https://anchor.fm/s/37e1314c/podcast/rss`;
+        const episodesContainer = document.getElementById('ep-list');
 
-    // $.ajax(RSS_URL, {
-    //     accepts: {
-    //         xml: "application/rss+xml"
-    //     },
+        $.ajax(RSS_URL, {
+            accepts: {
+                xml: "application/rss+xml"
+            },
 
-    //     dataType: "xml",
+            dataType: "xml",
 
-    //     success: function(data) {
-    //         console.log(data);
-    //         $(data).find("item")
-    //         .each(function() {
-    //             const el = $(this);
+            success: function(data) {
+                console.log(data);
+                $(data).find("item")
+                .each(function() {
+                    const el = $(this);
+                    // console.log(el.find("guid").text());
 
-    //             const epImage = el.find("itunes\\:image").attr('href');
-    //             const epSeason = el.find("itunes\\:season").text();
-    //             const epEpisode = el.find("itunes\\:episode").text();
-    //             const epPubDate = el.find("pubDate").text().toString();
-    //             const epTitle = el.find("title").text();
-    //             const epDesc = el.find("itunes\\:summary").text();
-    //             const epAudio = el.find("enclosure").attr('url');
+                        const url = 'http://localhost:8000/api/episodes';
+
+                        const data = {
+                            title : el.find("title").text(),
+                            description : el.find("itunes\\:summary").text(),
+                            img_url : el.find("itunes\\:image").attr('href'),
+                            audio_url : el.find("enclosure").attr('url'),
+                            duration : el.find("itunes\\:duration").text(),
+                            posted_on : el.find("pubDate").text().toString(),
+                            season : el.find("itunes\\:season").text(),
+                            episode : el.find("itunes\\:episode").text(),
+                            anchor_podcast : el.find("link").text(),
+                            slug : el.find("title").text(),
+                            guid : el.find("guid").text()
+                        }
+                    
+                        $.post(url,data, function(data, status) {
+                            console.log(`${data} and status is ${status}`)
+                        });
+
+                    
+    
+                });
+
                 
-                
-    //             const template = `
-                
-    //             <article class="entry entry-episode">
-    //                 <div class="row align-items-lg-center">
-    //                     <div class="col-12 col-md-4 col-xl-3">
-    //                         <div class="entry-media entry-image multiply-effect">
-    //                             <a href="single-episode.html">
-    //                                 <img class="first" src="${epImage}" width="736" height="736" alt="">
-    //                                 <span class="second"><img src="${epImage}" width="736" height="736" alt=""></span>
-    //                                 <span class="third"><img src="${epImage}" width="736" height="736" alt=""></span>
-    //                             </a>
-    //                         </div>
-    //                     </div>
-    //                     <div class="col-12 col-md-8 col-xl-9">
-    //                         <header class="entry-header">
-    //                             <div class="entry-meta">
-    //                                 <span class="posted-in"><span class="screen-reader-text">Posted in: </span> <a href="episodes.html" rel="bookmark">Season ${epSeason}</a></span>  <span class="posted-on"><span class="screen-reader-text">Posted in: </span> <a href="episodes.html" rel="bookmark">Episode ${epEpisode}</a></span>  <span class="posted-on"><span class="screen-reader-text">Posted on: </span> <a href="single-episode.html" rel="bookmark"><time class="entry-date published" datetime="2017-09-13T14:48:37+00:00">${epPubDate.substr(0,16)}</time></a></span>
-    //                             </div>
-    //                             <h2 class="entry-title"><a href="single-episode.html" rel="bookmark">${epTitle}</a></h2>
-    //                         </header>
-    //                         <div class="entry-content">
-    //                             ${epDesc.toString().substr(0,250)} &hellip; <a href="episode/${epSeason}/${epEpisode}">(read more)</a>
-    //                         </div>
-    //                         <div class="entry-audio">
-    //                             <div class="podcast-episode">
-    //                                 <div class="podcast-episode-player" data-episode-duration="00:41">
-    //                                     <audio class="wp-audio-shortcode" preload="auto" style="width: 100%;" controls="controls">
-    //                                         <source src="${epAudio}" type="audio/mpeg" />
-    //                                     </audio>
-    //                                 </div>
-    //                             </div>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </article>
+            }
+        });
+    }
 
-    //             `;
-    //             episodesContainer.insertAdjacentHTML("beforeend",template)
-    //         });
-
-    //         $('article.entry-episode').hide();
-    //         $('article.entry-episode:lt(5)').show();
-    //     }
-    // });
+    // updateEpisode();
 
     
     
