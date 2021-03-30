@@ -3,6 +3,8 @@ $(document).ready(function() {
         return html.replace(/(\#\w+)/g, '<span class="tomato">$1</span>');
     });
 
+    // console.log(window.location.origin + '/api/episodes');
+
 
 
     const updateEpisode = () => {
@@ -23,7 +25,7 @@ $(document).ready(function() {
                     const el = $(this);
                     // console.log(el.find("guid").text());
 
-                        const url = 'http://localhost:8000/api/episodes';
+                        const url = window.location.origin + '/api/episodes';
 
                         const data = {
                             title : el.find("title").text(),
