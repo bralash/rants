@@ -36,7 +36,5 @@ Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addTo
 // });
 
 Route::domain('admin.rantsnconfess.com')->group(function() {
-    Route::get('/', function() {
-        print('This is a test');
-    });
+    Route::get('/', ['uses' => 'App\Http\Controllers\UIController@subdomain']);
 });
