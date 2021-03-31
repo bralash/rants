@@ -27,3 +27,10 @@ Route::get('/get-audio', ['uses' => 'App\Http\Controllers\AudioController@getAud
 
 Route::get('/test', ['uses' => 'App\Http\Controllers\UIController@index']);
 Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addToMailing']);
+
+// Admin subdomain routing
+Route::group(['domain' => 'admin.rantsnconfess.com'], function() {
+    Route::get('/', function() {
+        print_r('This is a subdomain test');
+    });
+});
