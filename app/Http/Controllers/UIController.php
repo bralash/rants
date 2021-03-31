@@ -34,8 +34,4 @@ class UIController extends Controller
 
         return View('ui.mail-thanks');
     }
-
-    public function subdomain() {
-        print('This is a test');
-    }
 }

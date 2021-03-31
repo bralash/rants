@@ -14,11 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Subdomain routes 
-
-Route::domain('admin.rantsnconfess.com')->group(function() {
-    Route::get('/', ['uses' => 'App\Http\Controllers\UIController@subdomain']);
+Route::group([
+    'domain' => 'admin.' . env('APP_URL')],function() {
+    Route::get('/login', ['uses' => 'App\Http\Controllers\AdminController@showLogin']);
+    Route::prefix('auth')->group(function() {
+        Route::post('/login', ['uses' => 'App\Http\Controllers\AdminController@login']);
+        Route::get('/logout', ['uses' => 'App\Http\Controllers\AdminController@logout']);
+    });
+    Route::middleware('auth')->group(function() {
+        Route::get('/', ['uses' => 'App\Http\Controllers\AdminController@index']);
+    });
 });
 
+
+// Domain routes
 Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
 Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);
 Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
@@ -34,7 +43,3 @@ Route::get('/get-audio', ['uses' => 'App\Http\Controllers\AudioController@getAud
 Route::get('/test', ['uses' => 'App\Http\Controllers\UIController@index']);
 Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addToMailing']);
 
-// Admin subdomain routing
-Route::group(['domain' => 'admin.rantsnconfess.com'], function() {
-    Route::get('/', ['uses' => 'App\Http\Controllers\UIController@subdomain']);
-});
