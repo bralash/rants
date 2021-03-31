@@ -28,18 +28,25 @@ Route::group([
 
 
 // Domain routes
-Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
-Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);
-Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
 
+Route::group([
+    'domain' => env('APP_URL')], function() {
+    
 
-Route::post('/upload-audio', ['uses' => 'App\Http\Controllers\AudioController@store']);
-Route::get('/get-audio', ['uses' => 'App\Http\Controllers\AudioController@getAudio']);
+        Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
+        Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);
+        Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
+        
+        
+        Route::post('/upload-audio', ['uses' => 'App\Http\Controllers\AudioController@store']);
+        Route::get('/get-audio', ['uses' => 'App\Http\Controllers\AudioController@getAudio']);
+        
+        
+        
+        // UI Related Routes
+        
+        Route::get('/test', ['uses' => 'App\Http\Controllers\UIController@index']);
+        Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addToMailing']);
+});
 
-
-
-// UI Related Routes
-
-Route::get('/test', ['uses' => 'App\Http\Controllers\UIController@index']);
-Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addToMailing']);
 

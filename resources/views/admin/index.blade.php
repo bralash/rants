@@ -78,16 +78,38 @@
 <main id="content" class="padding-top-bottom">
     <div class="container">
         <div class="row justify-content-center stats">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div>
                     <p>
-                        <strong>2</strong>
+                        <strong>{{$season}}</strong>
                         Seasons
                     </p>
                 </div>
             </div>
-            <div class="col-md-4">Hi</div>
-            <div class="col-md-4">Hi</div>
+            <div class="col-md-3">
+                <div>
+                    <p>
+                        <strong>{{$episode}}</strong>
+                        Episodes
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <p>
+                        <strong>1.8k</strong>
+                        Plays
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <p>
+                        <strong>600</strong>
+                        Listeners
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </main>

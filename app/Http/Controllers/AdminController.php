@@ -8,12 +8,16 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Episode;
 
 
 class AdminController extends Controller
 {
     public function index() {
-        return View('admin.index');
+
+        $episode = count(Episode::all());
+        $season = Episode::max('season');
+        return View('admin.index', compact(['episode','season']));
     }
 
     public function showLogin() {
