@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Subdomain routes 
 Route::group([
     'domain' => 'admin.' . env('APP_URL')],function() {
-    Route::get('/login', ['uses' => 'App\Http\Controllers\AdminController@showLogin']);
+    Route::get('/login', ['as' => 'login','uses' => 'App\Http\Controllers\AdminController@showLogin']);
     Route::prefix('auth')->group(function() {
         Route::post('/login', ['uses' => 'App\Http\Controllers\AdminController@login']);
         Route::get('/logout', ['uses' => 'App\Http\Controllers\AdminController@logout']);
