@@ -29,12 +29,10 @@ Route::get('/test', ['uses' => 'App\Http\Controllers\UIController@index']);
 Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addToMailing']);
 
 // Admin subdomain routing
-// Route::group(['domain' => 'admin.rantsnconfess.com'], function() {
-//     Route::get('/', function() {
-//         print_r('This is a subdomain test');
-//     });
-// });
-
-Route::domain('admin.rantsnconfess.com')->group(function() {
+Route::group(['domain' => 'admin.rantsnconfess.com'], function() {
     Route::get('/', ['uses' => 'App\Http\Controllers\UIController@subdomain']);
 });
+
+// Route::domain('admin.rantsnconfess.com')->group(function() {
+//     Route::get('/', ['uses' => 'App\Http\Controllers\UIController@subdomain']);
+// });
