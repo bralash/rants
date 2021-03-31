@@ -24,11 +24,11 @@ $(document).ready(function() {
 
     const getLatestEpisode = () => {
         const url = window.location.origin + '/api/episodes';
-        $.ajax(url, {
+        $.ajax(url, { // Get all unique guids from database. 
             success : function(rantsData) {
 
                 const RSS_URL = `https://anchor.fm/s/37e1314c/podcast/rss`;
-                $.ajax(RSS_URL, {
+                $.ajax(RSS_URL, { // Get all episodes from RSS Feed
                     accepts: {
                         xml: "application/rss+xml"
                     },
@@ -43,7 +43,7 @@ $(document).ready(function() {
 
                                 let result = rantsData.filter(x => x.guid === anchorGuid);
 
-                                if(!result.length) {
+                                if(!result.length) { // Only update the episode table if the guid doesn't exist. 
                                     let momentDate = moment(el.find("pubDate").text().toString()).format('YYYY-MM-DD h:mm:ss');
                                     
                                     const data = {
