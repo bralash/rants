@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Subdomain routes 
+
+Route::domain('admin.rantsnconfess.com')->group(function() {
+    Route::get('/', ['uses' => 'App\Http\Controllers\UIController@subdomain']);
+});
+
 Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
 Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);
 Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
@@ -32,7 +38,3 @@ Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addTo
 Route::group(['domain' => 'admin.rantsnconfess.com'], function() {
     Route::get('/', ['uses' => 'App\Http\Controllers\UIController@subdomain']);
 });
-
-// Route::domain('admin.rantsnconfess.com')->group(function() {
-//     Route::get('/', ['uses' => 'App\Http\Controllers\UIController@subdomain']);
-// });
