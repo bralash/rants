@@ -74,7 +74,12 @@ $(document).ready(function() {
         });
     }
 
-    // getLatestEpisode();
+    
+
+    $('#refresh-episodes').on('click', function() {
+        console.log('Loading....');
+        getLatestEpisode();
+    });
 
     
     

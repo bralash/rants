@@ -16,14 +16,16 @@ use Illuminate\Support\Facades\Route;
 // Subdomain routes 
 Route::group([
     'domain' => 'admin.' . env('APP_URL')],function() {
-    Route::get('/login', ['as' => 'login','uses' => 'App\Http\Controllers\AdminController@showLogin']);
-    Route::prefix('auth')->group(function() {
-        Route::post('/login', ['uses' => 'App\Http\Controllers\AdminController@login']);
-        Route::get('/logout', ['uses' => 'App\Http\Controllers\AdminController@logout']);
-    });
-    Route::middleware('auth')->group(function() {
-        Route::get('/', ['uses' => 'App\Http\Controllers\AdminController@index']);
-    });
+        
+        Route::get('/login', ['as' => 'login','uses' => 'App\Http\Controllers\AdminController@showLogin']);
+        Route::prefix('auth')->group(function() {
+            Route::post('/login', ['uses' => 'App\Http\Controllers\AdminController@login']);
+            Route::get('/logout', ['uses' => 'App\Http\Controllers\AdminController@logout']);
+        });
+        Route::middleware('auth')->group(function() {
+            Route::get('/', ['uses' => 'App\Http\Controllers\AdminController@index']);
+            Route::get('/episodes', ['uses' => 'App\Http\Controllers\AdminController@episodes']);
+        });
 });
 
 

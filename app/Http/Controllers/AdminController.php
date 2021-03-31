@@ -20,6 +20,8 @@ class AdminController extends Controller
         return View('admin.index', compact(['episode','season']));
     }
 
+
+    // Authentication Methods
     public function showLogin() {
         return View('admin.login');
     }
@@ -48,9 +50,15 @@ class AdminController extends Controller
         }
     }
 
-
     public function logout() {
         Auth::logout();
         return redirect('/login');
+    }
+
+
+
+    public function episodes() {
+        $episodes = count(Episode::all());
+        return View('admin.episodes',compact('episodes'));
     }
 }
