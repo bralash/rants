@@ -1,0 +1,15 @@
+.stats p {
+    margin: 1em 0;
+    font-family: "Oswald", serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.stats p strong {
+    display: block;
+    margin: 0 0 .2em 0;
+    font-size: 2rem;
+    font-weight: 400;
+    color: tomato;
+}
