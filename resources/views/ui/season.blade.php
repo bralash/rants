@@ -1,80 +1,52 @@
 @extends('partials.master')
-@section('title','Rants and Confessions')
-<style id="castilo-inline-style">
+@section('title', $title)
+
+<style>
     .featured-content {
-        background-color: #313131;
-        background-image: url(assets/img/sample-header-small.jpg);
-    }
-    .scores {
-        background-color: #313131;
-        background-image: url(img/sample-stats-header.jpg);
-    }
+    background-color: #313131;
+    background-image: url(../img/sample-episodes-header.jpg);
+}
 
-    @media (min-width: 768px) {
-        .featured-content {
-            background-image: url(assets/img/sample-header.jpg);
-        }
-
-        .scores {
-            background-image: url(img/sample-stats-header.jpg);
-        }
-
+@media (min-width: 768px) {
+    .featured-content {
+        background-image: url(../img/sample-episodes-header.jpg);
     }
+}
 
-    .sales-box {
-        background-image: url(assets/img/sample-sales.jpg);
-    }
+.sales-box {
+    background-image: url(../assets/img/sample-sales.jpg);
+}
 
-    .latest-news {
-        background-image: url(assets/img/latest-news.jpg);
-    }
+.latest-news {
+    background-image: url(../assets/img/latest-news.jpg);
+}
 </style>
-@section('featured')
 
-@if (!empty($featured))
-<header id="featured" class="featured-content fade-background-0 padding-top-bottom">
+@section('featured')
+<header id="featured" class="featured-content fade-background-50 padding-top-bottom">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-lg-8 col-xl-7">
-                <div class="latest-episode">
-                    <div class="podcast-episode">
-                        <p class="big text-uppercase opacity-50">Feature Episode</p>
-                        <h1 class="entry-title"><a href="{{URL::to('episode')}}/{{$featured->slug}}">{{$featured->title}}</a></h1>
-                        <div class="podcast-episode">
-                            <div class="podcast-episode-player" data-episode-download="{{$featured->audio_url}}" data-episode-download-button="Download Episode" data-episode-duration="00:00" data-episode-size="">
-                                <audio class="wp-audio-shortcode" preload="none" style="width: 100%;" controls="controls">
-                                    <source src="{{$featured->audio_url}}" type="audio/mp3" />
-                                </audio>
-                            </div>
-                        </div>
-                        <p>
-                            @if (!empty($featured->apple_podcasts))
-                                <a href="{{$featured->apple_podcasts}}" class="button button-filled button-color"><span class="zmdi zmdi-apple"></span> Podcast</a>
-                            @endif
-    
-                            @if (!empty($featured->google_podcasts))
-                                <a href="{{$featured->google_podcasts}}" class="button button-white"><span class="zmdi zmdi-google"></span> Podcast</a>
-                            @endif
-                            
-                            <a href="https://anchor.fm/s/37e1314c/podcast/rss" class="button button-white"><span class="zmdi zmdi-rss"></span> RSS Feed</a>
-                        </p>
-                    </div>
-                </div>
+            <div class="col-12 col-md">
+                <h1 class="entry-title">{{$title}}</h1>
+            </div>
+            <div class="col-12 col-md-auto">
+                <p>
+                    <a href="https://anchor.fm/s/37e1314c/podcast/rss" class="button button-color button-filled">
+                        <span class="zmdi zmdi-rss"></span> Subscribe to RSS Feed
+                    </a>
+                </p>
             </div>
         </div>
     </div>
 </header>
-@endif
-
 @endsection
 
 
 @section('main')
-
-<main id="content" class="padding-top-bottom">
+<main id="content" class="has-sidebar padding-top-bottom">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-md-8 col-lg-9">
                 <div class="episodes-listing" id="ep-list">
                     <h3 class="add-separator"><span>Browse <em>Episodes</em></span></h3>
                     
@@ -121,19 +93,57 @@
                             </div>
                         </article>
                     @endforeach
-
+                    <div class="pagination">
+                        {{$episodes->links()}}
+                    </div>
                 </div>
-                <div class="pagination pagination-load-more">
-                    <a href="{{URL::to('/episodes')}}" class="button button-filled"><span class="zmdi zmdi-more"></span> Browse More</a>
+            </div>
+            <div id="sidebar" class="col-12 col-md-4 col-lg-3">
+                <div class="widget widget_categories">
+                    <h5 class="add-separator"><span>Categories</span></h5>
+                    <ul>
+                        <li class="cat-item"><a href="#">Podcast</a>
+                            <ul class="children">
+                                @foreach ($seasons as $season)
+                                    <li class="cat-item"><a href="{{URL::to('/season')}}/{{$season->season}}">Season {{$season->season}}</a></li>
+                                @endforeach
+                                
+                            </ul>
+                        </li>
+                        <li class="cat-item"><a href="#">Segment</a>
+                            <ul class="children">
+                                @foreach ($segments as $segment)
+                                    <li class="cat-item"><a href="{{URL::to('/segment')}}/{{$segment->slug}}">{{$segment->title}}</a></li>
+                                @endforeach
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="widget widget_text widget_custom_html highlight">
+                    <div class="textwidget custom-html-widget">
+                        <h5 class="add-separator"><span>Subscribe now!</span></h5>
+                        <img src="{{URL::asset('img/clear-logo.png')}}" alt="subscribe-itunes" style="display:block;margin:0.5em auto 1em;" width="108" height="108">
+                        <p class="no-margin-bottom">
+                            <a href="https://podcasts.apple.com/gh/podcast/rants-and-confessions/id1536307081" class="button underline" target="_blank">
+                                <span class="zmdi zmdi-apple"></span> Podcasts
+                            </a> 
+                            <a href="https://open.spotify.com/show/5xP3LJgQnNsulrIDfr3LTU" class="button underline" target="_blank">
+                                <span class="zmdi zmdi-open-in-new"></span> Spotify
+                            </a> 
+                            <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8zN2UxMzE0Yy9wb2RjYXN0L3Jzcw==" class="button underline" target="_blank">
+                                <span class="zmdi zmdi-google"></span> Podcasts
+                            </a> <a href="https://anchor.fm/s/37e1314c/podcast/rss" class="button underline" target="_blank">
+                                <span class="zmdi zmdi-rss"></span> RSS
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </main>
-
 @endsection
-
 
 @section('sales')
 <footer class="sales-box padding-top-bottom">
@@ -159,28 +169,4 @@
         </div>
     </div>
 </footer>
-<div class="scores alignfull margin-bottom padding-top-bottom">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <p><strong>{{$season}}</strong> Seasons</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <p><strong>{{$episodeCount}}</strong> Episodes</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <p><strong>{{$segment}}</strong> Segments</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <p><strong>1.8k+</strong> Plays</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <p><strong>600+</strong> Audience</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                <p><strong>900+</strong> Confessions</p>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection

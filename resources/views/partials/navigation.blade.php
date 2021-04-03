@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="site-title col col-lg-auto order-first">
                 <h1>
-                    <a href="{{URL::to('/test')}}" class="custom-logo-link" rel="home">
+                    <a href="{{URL::to('/')}}" class="custom-logo-link" rel="home">
                         <img src="{{URL::asset('img/logo.png')}}" class="custom-logo" width="76" height="18" alt="Castilo">
                     </a>
                 </h1>

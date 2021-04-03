@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Subdomain routes 
+// Subdomain routes - Admin 
 Route::group([
     'domain' => 'admin.' . env('APP_URL')],function() {
         
@@ -25,6 +25,7 @@ Route::group([
         Route::middleware('auth')->group(function() {
             Route::get('/', ['uses' => 'App\Http\Controllers\AdminController@index']);
             Route::get('/episodes', ['uses' => 'App\Http\Controllers\AdminController@episodes']);
+            Route::get('/episode/{slug}', ['uses' => 'App\Http\Controllers\AdminController@getEpisode']);
         });
 });
 
@@ -35,9 +36,9 @@ Route::group([
     'domain' => env('APP_URL')], function() {
     
 
-        Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
-        Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);
-        Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
+        // Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
+        // Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);
+        // Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
         
         
         Route::post('/upload-audio', ['uses' => 'App\Http\Controllers\AudioController@store']);
@@ -47,8 +48,19 @@ Route::group([
         
         // UI Related Routes
         
-        Route::get('/test', ['uses' => 'App\Http\Controllers\UIController@index']);
+        Route::get('/', ['uses' => 'App\Http\Controllers\UIController@index']);
+        Route::get('/contact', ['uses' => 'App\Http\Controllers\UIController@contact']);
+        Route::get('/donate', ['uses' => 'App\Http\Controllers\UIController@donate']);
+        Route::get('/episodes', ['uses' => 'App\Http\Controllers\UIController@episodes']);
+        Route::get('/episode/{slug}', ['uses' => 'App\Http\Controllers\UIController@getEpisode']);
+        Route::get('/confess', ['uses' => 'App\Http\Controllers\UIController@confession']);
+        Route::get('/season/{id}', ['uses' => 'App\Http\Controllers\UIController@seasons']);
+        Route::get('/segment/{slug}', ['uses' => 'App\Http\Controllers\UIController@segment']);
+        Route::post('/confess', ['uses' => 'App\Http\Controllers\UIController@storeConfession']);
+        Route::post('/upload-audio', ['uses' => 'App\Http\Controllers\AudioController@store']);
         Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addToMailing']);
+        Route::post('/contact', ['uses' => 'App\Http\Controllers\UIController@getInTouch']);
+        
 });
 
 

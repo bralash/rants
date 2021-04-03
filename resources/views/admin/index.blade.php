@@ -35,7 +35,7 @@
 <main id="content" class="padding-top-bottom">
     <div class="container">
         <div class="row justify-content-center stats">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div>
                     <p>
                         <strong>{{$season}}</strong>
@@ -43,7 +43,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div>
                     <p>
                         <strong>{{$episode}}</strong>
@@ -51,7 +51,15 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
+                <div>
+                    <p>
+                        <strong>{{$segment}}</strong>
+                        Segments
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-2">
                 <div>
                     <p>
                         <strong>1.8k</strong>
@@ -59,11 +67,20 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div>
                     <p>
                         <strong>600</strong>
                         Listeners
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div>
+                    <p>
+                        <strong>2</strong>
+                        Hosts
                     </p>
                 </div>
             </div>

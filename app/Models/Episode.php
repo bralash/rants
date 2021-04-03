@@ -21,4 +21,11 @@ class Episode extends Model
         'slug',
         'guid'
     ];
+
+    public function segment()
+    {
+        return $this->belongsTo(Segment::class);
+    }
+
+    
 }

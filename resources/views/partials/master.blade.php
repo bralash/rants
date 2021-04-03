@@ -22,23 +22,29 @@
 </head>
 <body class="home">
     
+	<style>
+		textarea {
+			resize: none;
+		}
+	</style>
     
 	<header id="top" class="navbar navbar-sticky">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="site-title col col-lg-auto order-first">
 					<h1>
-						<a href="{{URL::to('/test')}}" class="custom-logo-link" rel="home">
+						<a href="{{URL::to('/')}}" class="custom-logo-link" rel="home">
 							<img src="{{URL::asset('img/logo.png')}}" class="custom-logo" width="76" height="18" alt="Castilo">
 						</a>
 					</h1>
 				</div>
 				<nav id="site-menu" class="col-12 col-lg order-3 order-sm-4 order-lg-2">
 					<ul>
-						<li class="menu-item"><a href="{{URL::to('/about')}}">About</a></li>
+						{{-- <li class="menu-item"><a href="{{URL::to('/about')}}">About</a></li> --}}
 						<li class="menu-item"><a href="{{URL::to('/episodes')}}">Episodes</a></li>
-						<li class="menu-item"><a href="{{URL::to('/confessions')}}">Confessions</a></li>
+						{{-- <li class="menu-item"><a href="{{URL::to('/confessions')}}">Confessions</a></li> --}}
 						<li class="menu-item"><a href="{{URL::to('/contact')}}">Contact</a></li>
+						<li class="menu-item"><a href="{{URL::to('/donate')}}">Donate</a></li>
 					</ul>
 				</nav>
 				<nav id="social-links-menu" class="col-12 col-md-auto order-4 order-md-1 order-lg-3">
@@ -58,7 +64,7 @@
 					</ul>
 				</nav>
 				<div class="call-to-action col-12 col-sm-auto order-5 order-sm-2 order-lg-4">
-					<a href="{{URL::to('/')}}" class="button button-small"><span class="zmdi zmdi-edit"></span> Message</a>
+					<a href="{{URL::to('/confess')}}" class="button button-small"><span class="zmdi zmdi-edit"></span> Confess</a>
 				</div>
 				<div class="site-menu-toggle col-auto order-2 order-sm-3">
 					<a href="#site-menu">

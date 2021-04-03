@@ -9,15 +9,18 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Episode;
-
+use App\Models\Segment;
+use Carbon\Carbon;
+use DB;
 
 class AdminController extends Controller
 {
     public function index() {
 
+        $segment = count(Segment::all());
         $episode = count(Episode::all());
         $season = Episode::max('season');
-        return View('admin.index', compact(['episode','season']));
+        return View('admin.index', compact(['episode','season','segment']));
     }
 
 
@@ -58,7 +61,18 @@ class AdminController extends Controller
 
 
     public function episodes() {
-        $episodes = count(Episode::all());
-        return View('admin.episodes',compact('episodes'));
+        $episodes = Episode::where('archive', '0')->orderBy('posted_on', 'desc')->simplePaginate(5);
+        $episodeCount = count(Episode::all());
+        return View('admin.episodes',compact(['episodes','episodeCount']));
+    }
+
+    public function getEpisode($slug)
+    {
+        $segments = Segment::where('archive', '0')->orderBy('id', 'asc')->get();
+        $episode = Episode::where('slug',$slug)->first();
+        $episode->description = strip_tags($episode->description);
+        $episode->posted_on = Carbon::createFromFormat('Y-m-d H:i:s', $episode->posted_on)->toFormattedDateString();
+        
+        return View('admin.episode-detail', compact(['episode','segments']));
     }
 }

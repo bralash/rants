@@ -21,7 +21,7 @@ class AudioController extends Controller
             $posts_music->audio = $filename; 
             $posts_music->save();
 
-            return View('thanks');
+            return View('ui.confession-thanks');
         }
     }
 
