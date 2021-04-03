@@ -17,6 +17,15 @@
 	<link rel="stylesheet" href="{{URL::asset('assets/css/material-design-iconic-font.css')}}">
 
 	<link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-068CTZ0T91"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-068CTZ0T91');
+	</script>
 
 	
 </head>
