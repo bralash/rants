@@ -166,22 +166,22 @@
 <div class="scores alignfull margin-bottom padding-top-bottom">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <p><strong>{{$season}}</strong> Seasons</p>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <p><strong>{{$episodeCount}}</strong> Episodes</p>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <p><strong>{{$segment}}</strong> Segments</p>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <p><strong>1.8k+</strong> Plays</p>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <p><strong>600+</strong> Audience</p>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <p><strong>900+</strong> Confessions</p>
             </div>
         </div>
