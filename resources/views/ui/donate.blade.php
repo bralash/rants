@@ -1,5 +1,8 @@
 @extends('partials.master')
 @section('title','Donate')
+@section('meta')
+    @include('partials.donate')
+@endsection
 
 <style>
     .featured-content {

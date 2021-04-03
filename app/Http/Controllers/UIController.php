@@ -156,6 +156,9 @@ class UIController extends Controller
         $segments = Segment::where('archive', '0')->orderBy('id', 'asc')->get();
         $seasons = DB::table('episodes')->select('season')->groupBy('season')->get();
         $segment = Segment::where('archive','0')->where('slug',$slug)->first();
+
+
+        // This
         $episodes = Episode::whereHas('segment', function($subQuery) use ($slug) {
             $subQuery->where('slug',$slug);
         })->orderBy('posted_on','desc')->simplePaginate(5);

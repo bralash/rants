@@ -1,5 +1,8 @@
 @extends('partials.master')
 @section('title', 'Episodes')
+@section('meta')
+    @include('partials.episodes')
+@endsection
 
 <style>
     .featured-content {

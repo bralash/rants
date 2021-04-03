@@ -1,5 +1,8 @@
 @extends('partials.master')
 @section('title', $segment->title)
+@section('meta')
+    @include('partials.segment')
+@endsection
 
 <style>
     .featured-content {

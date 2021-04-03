@@ -1,5 +1,8 @@
 @extends('partials.master')
 @section('title',$episode->title)
+@section('meta')
+    @include('partials.episodes')
+@endsection
 
 <style id="castilo-inline-style">
     .featured-content {
@@ -64,7 +67,7 @@
                         </p>
                     </div>
                     <div class="entry-footer">
-                        <aside class="share-entry">
+                        {{-- <aside class="share-entry">
                             <h5 class="share-title">Share episode:</h5>
                             <p class="share-links">
                                 <a title="Facebook" target="_blank" href="#"><span class="zmdi zmdi-facebook"></span> <span class="screen-reader-text">Facebook</span></a>
@@ -72,7 +75,7 @@
                                 <a title="Twitter" target="_blank" href="#"><span class="zmdi zmdi-twitter"></span> <span class="screen-reader-text">Twitter</span></a>
                                 <a title="Pinterest" target="_blank" href="#"><span class="zmdi zmdi-pinterest"></span> <span class="screen-reader-text">Pinterest</span></a>
                             </p>
-                        </aside>
+                        </aside> --}}
                         <aside class="author-box has-description clearfix">
                             <div class="row align-items-lg-center">
                                 <figure class="col-4 col-md-3 col-xl-2 author-box-image">

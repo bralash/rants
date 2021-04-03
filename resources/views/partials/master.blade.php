@@ -4,9 +4,9 @@
 	<title>@yield('title')</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<meta name="description" content="Feeling the pressure of having to keep everything bottled up? Scared of opening up because you fear to be judged? That is what this podcast is for. Feel free to share your deepest, darkest secrets without revealing your identity">
 	<meta name="keywords" content="Rants, Confessions, Lashpixel, Anonymous, Podcast, Ghana">
+
+	@yield('meta')
 
 	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400%7CKarla:400,700" rel="stylesheet">
 
@@ -23,6 +23,10 @@
 <body class="home">
     
 	<style>
+		body {
+			max-width: 100%;
+			overflow-x: hidden;
+		}
 		textarea {
 			resize: none;
 		}

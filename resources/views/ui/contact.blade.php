@@ -1,5 +1,8 @@
 @extends('partials.master')
 @section('title','Contact Us')
+@section('meta')
+    @include('partials.contact')
+@endsection
     
 <style>
     .featured-content {

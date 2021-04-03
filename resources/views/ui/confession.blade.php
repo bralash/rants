@@ -1,5 +1,8 @@
 @extends('partials.master')
 @section('title','Anonymous Confessions')
+@section('meta')
+    @include('partials.confess')
+@endsection
 
 <style>
     .featured-content {
