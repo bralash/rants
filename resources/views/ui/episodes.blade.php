@@ -108,7 +108,7 @@
                         <li class="cat-item"><a href="#">Podcast</a>
                             <ul class="children">
                                 @foreach ($seasons as $season)
-                                    <li class="cat-item"><a href="#">Season {{$season->season}}</a></li>
+                                    <li class="cat-item"><a href="{{URL::to('/season')}}/{{$season->season}}">Season {{$season->season}}</a></li>
                                 @endforeach
                                 
                             </ul>
@@ -116,7 +116,7 @@
                         <li class="cat-item"><a href="#">Segment</a>
                             <ul class="children">
                                 @foreach ($segments as $segment)
-                                    <li class="cat-item"><a href="">{{$segment->title}}</a></li>
+                                    <li class="cat-item"><a href="{{URL::to('/segment')}}/{{$segment->slug}}">{{$segment->title}}</a></li>
                                 @endforeach
                                 
                             </ul>

@@ -1,5 +1,9 @@
 @extends('partials.master')
 @section('title','Page Not Found')
+@section('meta')
+    @include('partials.404')
+@endsection
+
 @section('featured')
 <div class="error404">
     <header id="featured" class="featured-content padding-top-bottom">
