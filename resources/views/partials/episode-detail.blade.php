@@ -1,6 +1,6 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{$episode->title}} by Rants and Confessions">
-<meta property="og:description" content="Scroll through the list of all our episodes. Listen and share with your friends">
+<meta property="og:description" content="{{$episode->description}}">
 <meta property="og:url" content="https://rantsnconfess.com/episodes">
 <meta property="og:site_name" content="{{$episode->title}} by Rants and Confessions">
 <meta property="og:image" content="https://rantsnconfess.com/img/favicon.jpg">
@@ -12,5 +12,5 @@
 <meta name="twitter:site" content="@rantsnconfess">
 <meta name="twitter:creator" content="@rantsnconfess">
 <meta name="twitter:title" content="{{$episode->title}} by Rants and Confessions">
-<meta name="twitter:description" content="Scroll through the list of all our episodes. Listen and share with your friends">
+<meta name="twitter:description" content="{{$episode->description}}">
 <meta name="twitter:image" content="https://rantsnconfess.com/img/favicon.jpg">
