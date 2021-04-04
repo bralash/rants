@@ -1,7 +1,7 @@
 @extends('partials.master')
 @section('title',$episode->title)
 @section('meta')
-    @include('partials.episodes')
+    @include('partials.episode-detail')
 @endsection
 
 <style id="castilo-inline-style">
