@@ -38,7 +38,7 @@ Route::group([
 
         // Route::get('/', ['uses' => 'App\Http\Controllers\MessageController@index']);
         // Route::post('/message', ['uses' => 'App\Http\Controllers\MessageController@message']);
-        // Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
+        
         
         
         Route::post('/upload-audio', ['uses' => 'App\Http\Controllers\AudioController@store']);
@@ -60,7 +60,7 @@ Route::group([
         Route::post('/upload-audio', ['uses' => 'App\Http\Controllers\AudioController@store']);
         Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addToMailing']);
         Route::post('/contact', ['uses' => 'App\Http\Controllers\UIController@getInTouch']);
-        
+        Route::get('/get-messages', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
 });
 
 
