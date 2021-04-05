@@ -73,7 +73,7 @@ class UIController extends Controller
 
     public function addToMailing(Request $request) {
         $mail = new Mailing;
-        $mail->email = $request->email;
+        $mail->email = strtolower($request->email);
         
 
         $mail->save();
@@ -158,7 +158,6 @@ class UIController extends Controller
         $segment = Segment::where('archive','0')->where('slug',$slug)->first();
 
 
-        // This
         $episodes = Episode::whereHas('segment', function($subQuery) use ($slug) {
             $subQuery->where('slug',$slug);
         })->orderBy('posted_on','desc')->simplePaginate(5);
