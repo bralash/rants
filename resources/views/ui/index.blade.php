@@ -42,7 +42,7 @@
             <div class="col-12 col-lg-8 col-xl-7">
                 <div class="latest-episode">
                     <div class="podcast-episode">
-                        <p class="big text-uppercase opacity-50">Feature Episode</p>
+                        <p class="big text-uppercase opacity-50">Featured Episode</p>
                         <h1 class="entry-title"><a href="{{URL::to('episode')}}/{{$featured->slug}}">{{$featured->title}}</a></h1>
                         <div class="podcast-episode">
                             <div class="podcast-episode-player" data-episode-download="{{$featured->audio_url}}" data-episode-download-button="Download Episode" data-episode-duration="00:00" data-episode-size="">
