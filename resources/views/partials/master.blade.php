@@ -112,7 +112,8 @@
 								<div class="mc4wp-form-fields">
 									<p>Be ahead of everyone else. Get notified whenever we post a new episode. Be the first to listen &hearts;</p>
 									<p class="one-line">
-										<label class="screen-reader-text" for="subscribe_email">Subscription Email</label><input id="subscribe_email" name="email" required="" placeholder="Your email address&hellip;" type="email"><input value="Subscribe" type="submit" class="button-color button-filled">
+										<label class="screen-reader-text" for="subscribe_email">Subscription Email</label>
+										<input id="subscribe_email" name="email" required="" placeholder="Your email address&hellip;" type="email"><input value="Subscribe" type="submit" class="button-color button-filled">
 									</p>
 								</div>
 							</form>

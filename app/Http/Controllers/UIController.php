@@ -73,7 +73,7 @@ class UIController extends Controller
 
     public function addToMailing(Request $request) {
         $mail = new Mailing;
-        $mail->email = Str::lower($request->email);
+        $mail->email = strtolower($request->email);
         
 
         $mail->save();

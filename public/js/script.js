@@ -5,6 +5,7 @@ $(document).ready(function() {
     });
 
 
+    //Create slug from title
     const slugify = str => {
         str = str.replace(/^\s+|\s+$/g, ''); // trim
         str = str.toLowerCase();
@@ -23,6 +24,8 @@ $(document).ready(function() {
         return str;
     }
 
+
+    //Get latest Episode from RSS
     const getLatestEpisode = () => {
         const url = window.location.origin + '/api/episodes';
         $.ajax(url, { // Get all unique guids from database. 
@@ -77,11 +80,25 @@ $(document).ready(function() {
     
 
     $('#refresh-episodes').on('click', function() {
-        console.log('Loading....');
         getLatestEpisode();
     });
 
-    
+    let plays = 0;
+
+    const getNumberOfPlays = () => {
+        const playButtons = $('.mejs-play button');
+        for(const button of playButtons) {
+            button.addEventListener('click', () => {
+                let parent = button.parentElement;
+                if(parent.classList.contains('mejs-play')) {
+                    plays++;
+                    console.log(plays);
+                }
+                
+            });
+        }
+    }
+
     
 
 });
