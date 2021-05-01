@@ -66,6 +66,7 @@ $(document).ready(function() {
 
                                     $.post(url,data, function(data, status) {
                                         console.log(`${data} and status is ${status}`)
+                                        alert('Episode loaded successfully')
                                     });
                                     
                                 }
