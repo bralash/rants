@@ -75,4 +75,8 @@ class AdminController extends Controller
         
         return View('admin.episode-detail', compact(['episode','segments']));
     }
+
+    public function confessions() {
+        return View('admin.confessions');
+    }
 }
