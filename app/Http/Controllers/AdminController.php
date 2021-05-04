@@ -78,7 +78,7 @@ class AdminController extends Controller
     }
 
     public function confessions() {
-        $confessionsCount = count(Message::all());
+        $confessionsCount = count(Message::where('archive',0)->get());
         return View('admin.confessions', compact('confessionsCount'));
     }
 
@@ -89,7 +89,7 @@ class AdminController extends Controller
             $confession->archive = 1;
             $confession->save();
         }
-        $confessionsCount = count(Message::all());
+        $confessionsCount = count(Message::where('archive',0)->get());
         return View('admin.confessions', compact('confessionsCount'));
     }
 }
