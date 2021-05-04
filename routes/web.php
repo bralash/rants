@@ -27,6 +27,7 @@ Route::group([
             Route::get('/episodes', ['uses' => 'App\Http\Controllers\AdminController@episodes']);
             Route::get('/episode/{slug}', ['uses' => 'App\Http\Controllers\AdminController@getEpisode']);
             Route::get('/confessions', ['uses' => 'App\Http\Controllers\AdminController@confessions']);
+            Route::get('/archive-confessions', ['uses' => 'App\Http\Controllers\AdminController@archive']);
         });
 });
 

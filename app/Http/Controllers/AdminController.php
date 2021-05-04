@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Episode;
 use App\Models\Segment;
+use App\Models\Message;
 use Carbon\Carbon;
 use DB;
 
@@ -77,6 +78,18 @@ class AdminController extends Controller
     }
 
     public function confessions() {
-        return View('admin.confessions');
+        $confessionsCount = count(Message::all());
+        return View('admin.confessions', compact('confessionsCount'));
+    }
+
+    public function archive() {
+        $confessions = Message::where('archive',0)->get();
+        foreach ($confessions as $confession)
+        {
+            $confession->archive = 1;
+            $confession->save();
+        }
+        $confessionsCount = count(Message::all());
+        return View('admin.confessions', compact('confessionsCount'));
     }
 }
