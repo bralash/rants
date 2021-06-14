@@ -62,7 +62,7 @@
             <div class="col-md-2">
                 <div>
                     <p>
-                        <strong>1.8k</strong>
+                        <strong>3k+</strong>
                         Plays
                     </p>
                 </div>
