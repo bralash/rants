@@ -95,7 +95,7 @@
                                     <label for="segment_id">Segment</label>
                                     <select name="segment_id" id="segment_id">
                                         @foreach ($segments as $segment)
-                                            <option value="{{$segment->id}}">{{$segment->title}}</option>
+                                            <option value="{{$segment->id}}" {{$episode->segment_id == $segment->id ? 'selected="selected"': ''}}>{{$segment->title}}</option>
                                         @endforeach
                                     </select>
 
