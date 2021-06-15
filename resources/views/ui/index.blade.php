@@ -176,7 +176,7 @@
                 <p><strong>{{$segment}}</strong> Segments</p>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <p><strong>2.5k+</strong> Plays</p>
+                <p><strong>3k+</strong> Plays</p>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <p><strong>700+</strong> Audience</p>
