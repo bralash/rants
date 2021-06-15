@@ -66,8 +66,8 @@
                         <p>{!! $episode->description !!}</p>
                         <h1>Update episode</h1>
 
-                        <form action="{{URL::to('/update-episode')}}/{{$episode->guid}}" method="post">
-                            {{ csrf_field() }}
+                        <form action="{{URL::to('/update-episode')}}/{{$episode->id}}" method="post">
+                            @csrf
 
                             <div class="row">
                                 <div class="col-12 col-md-6">
@@ -101,7 +101,8 @@
 
                                     
                                     <span style="margin-left: 15px">
-                                        <input type="checkbox" name="featured"> <label for="">Feature</label>
+                                        <input class="star" type="checkbox" title="Feature" name="featured"
+                                         @if($episode->featured) value="{{$episode->featured}}" checked @endif>
                                     </span>
                                 </div>
                             </div>

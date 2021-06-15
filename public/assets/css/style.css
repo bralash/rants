@@ -3105,3 +3105,21 @@ button .zmdi {
 #footer .copyright p:last-child {
 	margin-bottom: 0;
 }
+
+.star {
+    visibility:hidden;
+    font-size:40px;
+    cursor:pointer;
+	position: absolute !important;
+	top: 20px;
+}
+.star:before {
+   content: "\2606";
+   position: absolute;
+   visibility:visible;
+}
+.star:checked:before {
+   content: "\2605";
+   position: absolute;
+   color: goldenrod;
+}

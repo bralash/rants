@@ -92,4 +92,24 @@ class AdminController extends Controller
         $confessionsCount = count(Message::where('archive',0)->get());
         return View('admin.confessions', compact('confessionsCount'));
     }
+
+    public function updateEpisode($id) {
+        $featured = Request::get('featured');
+        $apple_podcasts = Request::get('apple_podcasts');
+        $google_podcasts = Request::get('google_podcasts');
+        $spotify = Request::get('spotify');
+        $segment_id = Request::get('segment_id');
+        $episode = Episode::find($id);
+        if($featured) {
+            Episode::where('id','!=', $id)->update(array('featured' => 0));
+            $episode->featured = 1;
+        }
+        $episode->apple_podcasts = $apple_podcasts;
+        $episode->google_podcasts = $google_podcasts;
+        $episode->spotify = $spotify;
+        $episode->segment_id = $segment_id;
+        $episode->save();
+        
+        return redirect('/episodes');
+    }
 }
