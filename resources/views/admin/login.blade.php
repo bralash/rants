@@ -32,7 +32,7 @@
                 <h1 class="entry-title">Login</h1>
 
                 <form action="{{URL::to('auth/login')}}" class="contact_form" method="post">
-                    {{ csrf_field() }}
+                    @csrf
 
                     @if ($errors->any())
                         @foreach ($errors->all() as $error)
