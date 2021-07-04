@@ -81,7 +81,7 @@ $(document).ready(function() {
 
     
 
-    $('#refresh-episodes').on('click', function() {
+    $('#refresh-episodes').on('click', () => {
         getLatestEpisode();
     });
 

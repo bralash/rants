@@ -29,6 +29,7 @@ Route::group([
             Route::get('/confessions', ['uses' => 'App\Http\Controllers\AdminController@confessions']);
             Route::get('/archive-confessions', ['uses' => 'App\Http\Controllers\AdminController@archive']);
             Route::post('/update-episode/{id}', ['uses' => 'App\Http\Controllers\AdminController@updateEpisode']);
+            Route::get('/delete-episode/{id}', ['uses' => 'App\Http\Controllers\AdminController@deleteEpisode']);
         });
 });
 

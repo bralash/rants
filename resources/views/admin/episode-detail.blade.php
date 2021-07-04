@@ -110,7 +110,9 @@
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <button type="submit" class="button-filled button-color">Update</button>
+                                    <a href="{{URL::to('/delete-episode/'.$episode->id)}}" class="button button-filled button-white">Delete</a>
                                 </div>
+                                
                             </div>
                         </form>
                     </div>

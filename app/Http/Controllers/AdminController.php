@@ -112,4 +112,9 @@ class AdminController extends Controller
         
         return redirect('/episodes');
     }
+
+    public function deleteEpisode($id) {
+        Episode::destroy($id);
+        return redirect('/episodes');
+    }
 }
