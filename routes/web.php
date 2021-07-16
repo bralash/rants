@@ -64,7 +64,7 @@ Route::group([
         Route::post('/upload-audio', ['uses' => 'App\Http\Controllers\AudioController@store']);
         Route::post('/mailing-list', ['uses' => 'App\Http\Controllers\UIController@addToMailing']);
         Route::post('/contact', ['uses' => 'App\Http\Controllers\UIController@getInTouch']);
-        Route::get('/cfx', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
+        Route::get('/rnc-mesx', ['uses' => 'App\Http\Controllers\MessageController@getMessages']);
 });
 
 
